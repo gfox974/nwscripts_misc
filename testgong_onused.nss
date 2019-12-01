@@ -5,7 +5,7 @@
 void main()
 {
     object oPC=GetLastUsedBy();
-    object curSkin = GetItemInSlot(INVENTORY_SLOT_CHEST, oPC);
+    object curSkin = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPC);
 
     checkHasSkin(oPC);
     PlaySound("as_cv_gongring3");

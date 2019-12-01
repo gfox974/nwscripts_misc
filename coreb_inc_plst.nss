@@ -9,7 +9,7 @@
 */
 
 // Consts
-string sTag = "player_state";
+string sTag = "x3_it_pchide";
 float maxSurvivalCount = 1.00;
 
 // Structures
@@ -46,7 +46,7 @@ struct PCState GetAllData(object oPC, object curSkin)
 // Functions
 // creature skin slot verification
 void checkHasSkin(object oPC) {
-    object curSkin = GetItemInSlot(INVENTORY_SLOT_CHEST, oPC);
+    object curSkin = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPC);
     if (GetTag(curSkin) == sTag) {
         FloatingTextStringOnCreature("Debug: skin ok", oPC, FALSE);
     } else {
@@ -60,4 +60,4 @@ void checkHasSkin(object oPC) {
 void main()
 {
 
-} */
+}*/

@@ -21,6 +21,6 @@ void main()
 {
     object oPC=GetEnteringObject();
 
-    checkHasSkin(oPC);
+    DelayCommand(0.5,checkHasSkin(oPC));
 
 }
