@@ -52,12 +52,12 @@ void checkHasSkin(object oPC) {
     } else {
         FloatingTextStringOnCreature("Debug: skin Nok", oPC, FALSE);
         object newSkin = CreateItemOnObject(sTag, oPC, 1);
-        DelayCommand(0.5, AssignCommand(oPC, ActionEquipItem(newSkin, INVENTORY_SLOT_CHEST)));
+        DelayCommand(0.5, AssignCommand(oPC, ActionEquipItem(newSkin, INVENTORY_SLOT_CARMOUR)));
     }
 }
 
-/*
+  /*
 void main()
 {
 
-}*/
+}   */
