@@ -5,7 +5,7 @@
 //:://////////////////////////////////////////////
 
      This script verify if the entering player have his creature skin equipied (tag: player_state),
-     If not, spawns it, equips it and set necessary starting variables,
+     If not, spawns it, equips it and assigns necessary starting variables,
      If the player is already stated correctly, execute the application
 
 //:://////////////////////////////////////////////

@@ -8,9 +8,44 @@
 //:://////////////////////////////////////////////
 */
 
+// Consts
+string sTag = "player_state";
+float maxSurvivalCount = 1.00;
+
+// Structures
+// Local var storage def
+struct PCState
+{
+    string name;
+    string key;
+    int level;
+    int isActivated;
+    float hungerLevel;
+    float thirstLevel;
+    float exhaustLevel;
+};
+// Local var storage methods
+struct PCState GetAllData(object oPC, object curSkin)
+{
+    if (GetTag(curSkin) == sTag) {
+        SendMessageToPC(oPC,"debug skin ok: getdata works");
+    } else {
+        SendMessageToPC(oPC,"debug skin nok: getdata works");
+    }
+    struct PCState returnValues;
+        returnValues.name = GetName(oPC);
+        returnValues.key = GetPCPublicCDKey(oPC);
+        returnValues.level = GetHitDice(oPC);
+        returnValues.isActivated = GetLocalInt(curSkin,"isActivated");
+        returnValues.hungerLevel = GetLocalFloat(curSkin,"hungerLevel");
+        returnValues.thirstLevel = GetLocalFloat(curSkin,"thirstLevel");
+        returnValues.exhaustLevel = GetLocalFloat(curSkin,"exhaustLevel");
+        return returnValues;
+}
+
+// Functions
 // creature skin slot verification
 void checkHasSkin(object oPC) {
-    string sTag = "player_state";
     object curSkin = GetItemInSlot(INVENTORY_SLOT_CHEST, oPC);
     if (GetTag(curSkin) == sTag) {
         FloatingTextStringOnCreature("Debug: skin ok", oPC, FALSE);
@@ -25,4 +60,4 @@ void checkHasSkin(object oPC) {
 void main()
 {
 
-}*/
+} */
